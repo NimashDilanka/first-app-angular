@@ -1,10 +1,9 @@
-<button class="btn btn-primary" disabled>Click to Save</button>
-<!-- disabled is a property of HTML button -->
-<button class="btn btn-primary" disabled="true">Click disable true one</button>
-<!-- disabled is a property and assigned a value -->
+<label>person Name</label>
+<input type="text" class="form-control" (input)="onUpdateName($event)">
 <button class="btn btn-primary" [disabled]="!enableClick" (click)="onSaveClick()">Save Booking</button>
 <!-- disabled is a property and assigned a value -->
 <p>{{saveMsg}}</p>
+<p> person name: {{personName}}</p>
 
 
 

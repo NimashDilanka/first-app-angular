@@ -11,6 +11,7 @@ export class FieldComponent implements OnInit {
   status = 'COMPLETED';
   enableClick = false;
   saveMsg = 'not yet saved';
+  personName = '';
 
   getStatus() {
     return this.status;
@@ -25,6 +26,11 @@ export class FieldComponent implements OnInit {
         this.enableClick = true;
       },
       2000);
+  }
+
+  onUpdateName(event: Event) {
+    console.log(event);
+    this.personName = (event.target as HTMLInputElement).value;
   }
 
   ngOnInit(): void {
