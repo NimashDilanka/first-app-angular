@@ -9,15 +9,20 @@ export class FieldComponent implements OnInit {
   fieldName = 'userName';
   age = 23;
   status = 'COMPLETED';
-  setDisable = false;
+  enableClick = false;
+  saveMsg = 'not yet saved';
 
   getStatus() {
     return this.status;
   }
 
+  onSaveClick() {
+    this.saveMsg = 'Application Saved';
+  }
+
   constructor() {
     setTimeout(() => {
-        this.setDisable = true;
+        this.enableClick = true;
       },
       2000);
   }

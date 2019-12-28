@@ -2,8 +2,9 @@
 <!-- disabled is a property of HTML button -->
 <button class="btn btn-primary" disabled="true">Click disable true one</button>
 <!-- disabled is a property and assigned a value -->
-<button class="btn btn-primary" [disabled]="setDisable">Click btn property binded</button>
+<button class="btn btn-primary" [disabled]="!enableClick" (click)="onSaveClick()">Save Booking</button>
 <!-- disabled is a property and assigned a value -->
+<p>{{saveMsg}}</p>
 
 
 
