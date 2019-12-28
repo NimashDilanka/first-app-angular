@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: '.app-field',
+  selector: 'app-field',
   templateUrl: './field.component.html',
   styleUrls: ['./field.component.css']
 })
-export class FieldComponent implements OnInit {
+export class FieldComponent {
+  fieldName = 'userName';
+  age = 23;
+  status = 'COMPLETED';
 
-  constructor() { }
-
-  ngOnInit() {
+  getStatus() {
+    return this.status;
   }
-
 }
