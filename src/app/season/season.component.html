@@ -1,0 +1,11 @@
+<p *ngIf="clickCount%2===0; else elseBlock"> this is secret paragraph. click count{{clickCount}}</p>
+<ng-template #elseBlock>
+  <p>Content to render when condition is false.</p>
+</ng-template>
+<button class="btn btn-primary" (click)="onClick()">Display Details</button>
+<p *ngFor="let count of countArray"
+   [textContent]="count"
+   [ngStyle]="{backgroundColor: count>5? 'blue':'transparent'}"
+   [ngClass]="{sampleClass:count>5}">
+
+</p>

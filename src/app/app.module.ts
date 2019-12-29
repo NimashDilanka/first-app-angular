@@ -3,12 +3,12 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { FieldComponent } from './field/field.component';
+import { SeasonComponent } from './season/season.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FieldComponent,
+    SeasonComponent,
   ],
   imports: [
     BrowserModule,
