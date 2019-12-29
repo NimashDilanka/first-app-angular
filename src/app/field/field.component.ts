@@ -11,4 +11,8 @@ export class FieldComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  getColor() {
+    return this.nameAdded ? 'green' : 'red';
+  }
 }

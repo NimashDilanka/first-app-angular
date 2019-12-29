@@ -6,15 +6,12 @@
         (click)="nameAdded=true">
   Add Name to system
 </button>
-<p *ngIf="nameAdded===true && personName!==''"> person name: {{personName}} is added to system</p>
-<!-- ngIf is a directive , if condition is false, then angular just REMOVE the paragraph, not just hide it.-->
 
-<!-- we can user else condition-->
-<p *ngIf="nameAdded===true"> person name: {{personName}} is added to system</p>
-<p *ngIf="nameAdded!==true"> no name is added to system yet</p>
+<button class="btn btn-primary"
+        [disabled]="personName===''"
+        (click)="nameAdded=false">
+  Remove Name from system
+</button>
 
-<!-- ngIf with local marker and ngTemplate -->
-<p *ngIf="nameAdded===true; else noServer"> person name: {{personName}} is added to system</p>
-<ng-template #noServer>
-  <p>No server added</p>
-</ng-template>
+<p [ngStyle]="{backgroundColor: getColor()}"> Person name is {{!nameAdded ? 'is not added' : personName}}</p>
+
