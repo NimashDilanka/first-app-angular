@@ -7,6 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class FieldComponent implements OnInit {
   personName = '';
+  nameAdded = false;
 
   ngOnInit(): void {
   }

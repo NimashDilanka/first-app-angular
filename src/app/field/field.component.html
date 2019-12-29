@@ -3,10 +3,18 @@
 <p>This is the paragraph. Person name is: {{personName}}</p>
 <button class="btn btn-primary"
         [disabled]="personName===''"
-        (click)="personName=''">Reset Name
+        (click)="nameAdded=true">
+  Add Name to system
 </button>
-<!-- disabled is a property and assigned a value -->
-<p> person name: {{personName}}</p>
+<p *ngIf="nameAdded===true && personName!==''"> person name: {{personName}} is added to system</p>
+<!-- ngIf is a directive , if condition is false, then angular just REMOVE the paragraph, not just hide it.-->
 
+<!-- we can user else condition-->
+<p *ngIf="nameAdded===true"> person name: {{personName}} is added to system</p>
+<p *ngIf="nameAdded!==true"> no name is added to system yet</p>
 
-
+<!-- ngIf with local marker and ngTemplate -->
+<p *ngIf="nameAdded===true; else noServer"> person name: {{personName}} is added to system</p>
+<ng-template #noServer>
+  <p>No server added</p>
+</ng-template>
